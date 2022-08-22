@@ -1,0 +1,14 @@
+.history-container {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    box-shadow: 3px;
+    background-color: rgb(125, 133, 139);
+    box-shadow: 5px 5px black;
+    width: 15%;
+    margin: 5px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}

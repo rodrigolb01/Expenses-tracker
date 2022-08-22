@@ -1,0 +1,15 @@
+.container {
+    text-align: center;
+    box-shadow: 3px;
+    display: flex;
+    background-color: rgb(125, 133, 139);
+    box-shadow: 5px 5px black;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.unit {
+    text-align: center;
+    margin: 5px;
+}

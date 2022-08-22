@@ -1,0 +1,8 @@
+.header-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.header-value {
+    margin-top: -35px;
+}
