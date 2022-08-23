@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './style/IncomeExpense.css'
+import { GlobalContext } from '../context/GlobalState'
+import Transaction from './Transaction';
 
 const IncomeExpenseBox = () => {
+  const transactions = useContext(GlobalContext);
+
+  const expenses = transactions.transactions.map(transaction => transaction.amount < 0 ? transaction.amount : 0);
+  const incomes = transactions.transactions.map(transaction => transaction.amount > 0 ? transaction.amount : 0);
+
+  const totalExpenses = expenses.reduce((acc, item) => (acc += item), 0).toFixed(2);
+  const totalIncomes = incomes.reduce((acc, item) => (acc += item), 0).toFixed(2);
+
   return (
     <div className='container'>
         <div className='unit'>
@@ -15,7 +25,7 @@ const IncomeExpenseBox = () => {
               fontWeight: 'bold',
               color: 'green'
               }
-            }>`${500.00}`</h4>
+            }>${totalIncomes}</h4>
         </div>
         <div className='unit'>
             <h4 style={
@@ -28,7 +38,7 @@ const IncomeExpenseBox = () => {
               fontWeight: 'bold',
               color: 'red'
               }
-            }>`${500.00}`</h4>
+            }>${totalExpenses}</h4>
         </div>
     </div>
   )

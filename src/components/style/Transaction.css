@@ -14,3 +14,12 @@
     width: 160px;
     box-shadow: 2px 3px black;
 }
+
+.border-expense {
+    margin-left: auto;
+    background-color: rgb(236, 17, 17);
+}
+.border-income {
+    margin-left: auto;
+    background-color: rgb(9, 255, 0);
+}

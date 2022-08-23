@@ -1,16 +1,20 @@
 import './App.css';
-import dio from './pics/wryy.gif'
 import Header from './components/Header';
 import IncomeExpenseBox from './components/IncomeExpenseBox';
 import HistoryBox from './components/HistoryBox';
+import Footer from './components/Footer';
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
-    <div className="App">
-      <Header></Header>
-      <IncomeExpenseBox></IncomeExpenseBox>
-      <HistoryBox></HistoryBox>
-    </div>
+    <GlobalProvider>
+       <div className="App">
+        <Header/>
+        <IncomeExpenseBox/>
+        <HistoryBox/>
+        <Footer/>
+      </div>
+    </GlobalProvider>
   );
 }
 

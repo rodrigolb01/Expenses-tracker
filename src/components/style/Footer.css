@@ -1,0 +1,12 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-button {
+    margin-top: 15px;
+    height: 40px;
+    color: aliceblue;
+    background-color: blueviolet;
+    box-shadow: 3px 2 px black;
+}
